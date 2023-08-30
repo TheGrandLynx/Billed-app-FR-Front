@@ -20,8 +20,15 @@ const row = (bill) => {
   }
 
 const rows = (data) => {
-  return (data && data.length) ? data.map(bill => row(bill)).join("") : ""
-}
+  // [Bug report] - Bills | High 🔥
+  // code before :
+  // return (data && data.length) ? data.map(bill => row(bill)).join("") : "";
+  // fixed code below (added a sort to the data):
+  return (data && data.length) ? data
+    .sort((a, b) => (a.date < b.date) ? 1 : -1)
+    .map(bill => row(bill))
+    .join("") : "";
+};
 
 export default ({ data: bills, loading, error }) => {
   
