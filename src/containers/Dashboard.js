@@ -145,8 +145,17 @@ export default class {
       this.counter ++
     }
 
+    
     bills.forEach(bill => {
-      $(`#open-bill${bill.id}`).click((e) => this.handleEditTicket(e, bill, bills))
+      // [Bug hunt] - Dashboard | High 🔥
+      // previous code below :
+      // $(`#open-bill${bill.id}`).click((e) => this.handleEditTicket(e, bill, bills))    
+      // this code add a click event listener to every "opened" container
+      // resulting in adding two click listeners to the already opened one
+      // resulting in discarding them
+      // we need to specify, the container in which we want to add the click listeners
+      // so here is the fixed code below
+      $(`#status-bills-container${ this.index } #open-bill${bill.id}`).click((e) => this.handleEditTicket(e, bill, bills))
     })
 
     return bills

@@ -936,7 +936,7 @@
     "@types/node" "*"
     jest-mock "^26.6.2"
 
-"@jest/environment@^29.3.1":
+"@jest/environment@^29.6.0":
   version "29.6.4"
   resolved "https://registry.npmjs.org/@jest/environment/-/environment-29.6.4.tgz"
   integrity sha512-sQ0SULEjA1XUTHmkBRl7A1dyITM9yb1yb3ZNKPX3KlTd6IG7mWUe3e2yfExtC2Zz1Q+mMckOLHmL/qLiuQJrBQ==
@@ -958,7 +958,7 @@
     jest-mock "^26.6.2"
     jest-util "^26.6.2"
 
-"@jest/fake-timers@^29.3.1", "@jest/fake-timers@^29.6.4":
+"@jest/fake-timers@^29.6.0", "@jest/fake-timers@^29.6.4":
   version "29.6.4"
   resolved "https://registry.npmjs.org/@jest/fake-timers/-/fake-timers-29.6.4.tgz"
   integrity sha512-6UkCwzoBK60edXIIWb0/KWkuj7R7Qq91vVInOe3De6DSpaEiqjKcJw4F7XUet24Wupahj9J6PlR09JqJ5ySDHw==
@@ -1100,7 +1100,7 @@
     "@types/yargs" "^15.0.0"
     chalk "^4.0.0"
 
-"@jest/types@^29.3.1", "@jest/types@^29.6.3":
+"@jest/types@^29.6.0", "@jest/types@^29.6.3":
   version "29.6.3"
   resolved "https://registry.npmjs.org/@jest/types/-/types-29.6.3.tgz"
   integrity sha512-u3UPsIilWKOM3F9CXtrG8LEJmNxwoCQC/XVj4IKYXvvpx7QIi/Kg1LI5uDmDpKlac62NUtX7eLjRh+jVZcLOzw==
@@ -3058,18 +3058,18 @@ jest-environment-jsdom@^26.1.0:
     jest-util "^26.6.2"
     jsdom "^16.4.0"
 
-jest-environment-jsdom@^29.3.1:
-  version "29.3.1"
-  resolved "https://registry.npmjs.org/jest-environment-jsdom/-/jest-environment-jsdom-29.3.1.tgz"
-  integrity sha512-G46nKgiez2Gy4zvYNhayfMEAFlVHhWfncqvqS6yCd0i+a4NsSUD2WtrKSaYQrYiLQaupHXxCRi8xxVL2M9PbhA==
+jest-environment-jsdom@^29.6.0:
+  version "29.6.0"
+  resolved "https://registry.npmjs.org/jest-environment-jsdom/-/jest-environment-jsdom-29.6.0.tgz"
+  integrity sha512-/cOhoyv+uMbOh4nQPyqtkPas/uUxr5AbK6TPqMMFyj1qEJURY78RhqgBjOFIX02+Lvu5V0RWLq2qKY1dHubFOQ==
   dependencies:
-    "@jest/environment" "^29.3.1"
-    "@jest/fake-timers" "^29.3.1"
-    "@jest/types" "^29.3.1"
+    "@jest/environment" "^29.6.0"
+    "@jest/fake-timers" "^29.6.0"
+    "@jest/types" "^29.6.0"
     "@types/jsdom" "^20.0.0"
     "@types/node" "*"
-    jest-mock "^29.3.1"
-    jest-util "^29.3.1"
+    jest-mock "^29.6.0"
+    jest-util "^29.6.0"
     jsdom "^20.0.0"
 
 jest-environment-node@^26.1.0:
@@ -3252,7 +3252,7 @@ jest-mock@^26.1.0, jest-mock@^26.6.2:
     "@jest/types" "^26.6.2"
     "@types/node" "*"
 
-jest-mock@^29.3.1, jest-mock@^29.6.3:
+jest-mock@^29.6.0, jest-mock@^29.6.3:
   version "29.6.3"
   resolved "https://registry.npmjs.org/jest-mock/-/jest-mock-29.6.3.tgz"
   integrity sha512-Z7Gs/mOyTSR4yPsaZ72a/MtuK6RnC3JYqWONe48oLaoEcYwEDxqvbXz85G4SJrm2Z5Ar9zp6MiHF4AlFlRM4Pg==
@@ -3402,7 +3402,7 @@ jest-util@^26.1.0, jest-util@^26.6.2:
     is-ci "^2.0.0"
     micromatch "^4.0.2"
 
-jest-util@^29.3.1, jest-util@^29.6.3:
+jest-util@^29.6.0, jest-util@^29.6.3:
   version "29.6.3"
   resolved "https://registry.npmjs.org/jest-util/-/jest-util-29.6.3.tgz"
   integrity sha512-QUjna/xSy4B32fzcKTSz1w7YYzgiHrjjJjevdRf61HYk998R5vVMMNmrHESYZVDS5DSWs+1srPLPKxXPkeSDOA==
