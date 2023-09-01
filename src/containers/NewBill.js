@@ -17,6 +17,9 @@ export default class NewBill {
   }
   handleChangeFile = e => {
     e.preventDefault()
+    // [Bug hunt] - NewBills | High 🔥
+    // we need to test the type of the file uploaded
+    const mimeTypes = ["image/jpg", "image/jpeg", "image/png"]; // array of authorized file type (MIME types)
     const file = this.document.querySelector(`input[data-testid="file"]`).files[0]
     const filePath = e.target.value.split(/\\/g)
     const fileName = filePath[filePath.length-1]
@@ -25,20 +28,30 @@ export default class NewBill {
     formData.append('file', file)
     formData.append('email', email)
 
-    this.store
-      .bills()
-      .create({
-        data: formData,
-        headers: {
-          noContentType: true
-        }
-      })
-      .then(({fileUrl, key}) => {
-        console.log(fileUrl)
-        this.billId = key
-        this.fileUrl = fileUrl
-        this.fileName = fileName
-      }).catch(error => console.error(error))
+    // If the file type is included in the list of authorized file types
+    // we can create the bill
+    if (mimeTypes.includes(file.type)) {
+      this.store
+        .bills()
+        .create({
+          data: formData,
+          headers: {
+            noContentType: true
+          }
+        })
+        .then(({fileUrl, key}) => {
+          console.log(fileUrl)
+          this.billId = key
+          this.fileUrl = fileUrl
+          this.fileName = fileName
+        }).catch(error => console.error(error))
+      } else {
+        // If the file type is NOT included in the list of authorized file types
+        // we do not create  the bill, we reset the file file's input value
+        // and we show an alert to the user
+        e.target.value = "";
+        alert("Format de fichier non authorisé. Le format du fichier doit être en .JPG, .JPEG ou .PNG")
+      }
   }
   handleSubmit = e => {
     e.preventDefault()
