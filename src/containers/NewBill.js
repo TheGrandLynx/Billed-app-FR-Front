@@ -40,7 +40,6 @@ export default class NewBill {
           }
         })
         .then(({fileUrl, key}) => {
-          console.log(fileUrl)
           this.billId = key
           this.fileUrl = fileUrl
           this.fileName = fileName
@@ -50,12 +49,13 @@ export default class NewBill {
         // we do not create  the bill, we reset the file file's input value
         // and we show an alert to the user
         e.target.value = "";
-        alert("Format de fichier non authorisé. Le format du fichier doit être en .JPG, .JPEG ou .PNG")
+        alert("Format de fichier non autorisé. Le format du fichier doit être en .JPG, .JPEG ou .PNG")
       }
   }
+
+  
   handleSubmit = e => {
     e.preventDefault()
-    console.log('e.target.querySelector(`input[data-testid="datepicker"]`).value', e.target.querySelector(`input[data-testid="datepicker"]`).value)
     const email = JSON.parse(localStorage.getItem("user")).email
     const bill = {
       email,
